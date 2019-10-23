@@ -1,3 +1,13 @@
-a = [2, 4, 10, 12, 16, 17, 20, 26, 27, 30, 39, 44, 48, 51, 54, 57, 59]
-for x in a:
-    print("'" + str(x) + "x', '" + str(x) + "y', '" + str(x) + "z', ")
+import numpy as np
+
+a = np.array([6, 0])
+b = np.array([0, 0])
+c = np.array([0, 6])
+
+ba = a - b
+bc = c - b
+
+cosine_angle = np.dot(ba, bc) / (np.linalg.norm(ba) * np.linalg.norm(bc))
+angle = np.arccos(cosine_angle)
+
+print(angle)
