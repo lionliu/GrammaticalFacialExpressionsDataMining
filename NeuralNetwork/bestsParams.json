@@ -1,0 +1,110 @@
+{
+    "a_affirmative": {
+        "solver": "adam", 
+        "learning_rate_init": 0.003, 
+        "alpha": 0.01, 
+        "activation": "relu"
+    }, 
+    "a_conditional": {
+        "solver": "adam", 
+        "learning_rate_init": 0.03, 
+        "alpha": 0.03, 
+        "activation": "tanh"
+    }, 
+    "a_doubt_question": {
+        "solver": "sgd", 
+        "learning_rate_init": 0.03, 
+        "alpha": 0.0001, 
+        "activation": "tanh"
+    }, 
+    "a_emphasis": {
+        "solver": "adam", 
+        "learning_rate_init": 0.01, 
+        "alpha": 0.003, 
+        "activation": "tanh"
+    }, 
+    "a_negative": {
+        "solver": "adam", 
+        "learning_rate_init": 0.03, 
+        "alpha": 0.0003, 
+        "activation": "relu"
+    }, 
+    "a_relative": {
+        "solver": "sgd", 
+        "learning_rate_init": 0.001, 
+        "alpha": 0.003, 
+        "activation": "logistic"
+    }, 
+    "a_topics": {
+        "solver": "adam", 
+        "learning_rate_init": 0.03, 
+        "alpha": 0.003, 
+        "activation": "relu"
+    }, 
+    "a_wh_question": {
+        "solver": "sgd", 
+        "learning_rate_init": 0.001, 
+        "alpha": 0.03, 
+        "activation": "relu"
+    }, 
+    "a_yn_question": {
+        "solver": "adam", 
+        "learning_rate_init": 0.01, 
+        "alpha": 0.01, 
+        "activation": "logistic"
+    }, 
+    "b_affirmative": {
+        "solver": "sgd", 
+        "learning_rate_init": 0.01, 
+        "alpha": 0.03, 
+        "activation": "relu"
+    }, 
+    "b_conditional": {
+        "solver": "adam", 
+        "learning_rate_init": 0.03, 
+        "alpha": 0.01, 
+        "activation": "logistic"
+    }, 
+    "b_doubt_question": {
+        "solver": "sgd", 
+        "learning_rate_init": 0.001, 
+        "alpha": 0.0001, 
+        "activation": "tanh"
+    }, 
+    "b_emphasis": {
+        "solver": "adam", 
+        "learning_rate_init": 0.01, 
+        "alpha": 0.0001, 
+        "activation": "tanh"
+    }, 
+    "b_negative": {
+        "solver": "sgd", 
+        "learning_rate_init": 0.001, 
+        "alpha": 0.0001, 
+        "activation": "relu"
+    }, 
+    "b_relative": {
+        "solver": "adam", 
+        "learning_rate_init": 0.03, 
+        "alpha": 0.003, 
+        "activation": "relu"
+    }, 
+    "b_topics": {
+        "solver": "adam", 
+        "learning_rate_init": 0.01, 
+        "alpha": 0.003, 
+        "activation": "logistic"
+    }, 
+    "b_wh_question": {
+        "solver": "adam", 
+        "learning_rate_init": 0.003, 
+        "alpha": 0.0003, 
+        "activation": "logistic"
+    }, 
+    "b_yn_question": {
+        "solver": "sgd", 
+        "learning_rate_init": 0.01, 
+        "alpha": 0.0001, 
+        "activation": "logistic"
+    }
+}
