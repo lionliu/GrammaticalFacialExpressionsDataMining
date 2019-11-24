@@ -1,0 +1,111 @@
+{
+    "a_affirmative": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.001, 
+        "RocAucScore": 0.7098041325871717
+    }, "a_conditional": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.7602000544365813
+    }, "a_doubt_question": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.746338041565606
+    }, "a_emphasis": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001,
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.6677010057554793
+    }, "a_negative": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0003, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.7080861162908968
+    }, "a_relative": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.001, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.8113244777907263
+    }, "a_topics": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.7605155528873213
+    }, "a_wh_question": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0003, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.7206069200226886
+    }, "a_yn_question": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.001, 
+        "RocAucScore": 0.6897862060384871
+    }, "b_affirmative": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.6766798941798943
+    }, "b_conditional": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0003, 
+        "learning_rate_init": 0.003,
+        "RocAucScore": 0.8580412644665689
+    }, "b_doubt_question": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.001, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.8621360852420505
+    }, "b_emphasis": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.01, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.8490907083117804
+    }, "b_negative": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0003, 
+        "learning_rate_init": 0.001, 
+        "RocAucScore": 0.7738888756918545
+    }, "b_relative": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.8611209328568743
+    }, "b_topics": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.8131314799522892
+    }, "b_wh_question": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.003, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.8848608738101049
+    }, "b_yn_question": {
+        "activation": "relu", 
+        "solver": "adam", 
+        "alpha": 0.0001, 
+        "learning_rate_init": 0.003, 
+        "RocAucScore": 0.8633647428924235
+    }
+}

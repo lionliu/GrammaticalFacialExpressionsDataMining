@@ -1,0 +1,75 @@
+{
+    "a_affirmative": {
+        "layers": [30, 30], "alpha": 0.0001, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.6660299182092121
+    }, "a_conditional": {
+        "layers": [30, 30], "alpha": 0.0001, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.7048992923244419
+    }, "a_doubt_question": {
+        "layers": [30, 30], "alpha": 0.0001, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.6671779141104295
+    }, "a_emphasis": {
+        "layers": [30, 30], "alpha": 0.0001, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.5959464566013604
+    }, "a_negative": {
+        "layers": [30, 30], "alpha": 0.0003, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.6435605418483872
+    }, "a_relative": {
+        "layers": [30, 30], "alpha": 0.0003, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.733419072071612
+    }, "a_topics": {
+        "layers": [30, 30], "alpha": 0.0003, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.6861984540917788
+    }, "a_wh_question": {
+        "layers": [30, 30], "alpha": 0.0003, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.6716279069767442
+    }, "a_yn_question": {
+        "layers": [30, 30], "alpha": 0.0001, 
+        "learning_rate_init": 0.003,
+        "RocAucScore": 0.6208008460517584
+    }, "b_affirmative": {
+        "layers": [30, 30], "alpha": 0.01, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.6993871252204585
+    }, "b_conditional": {
+        "layers": [30, 30], "alpha": 0.003, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.7525900843988479
+    }, "b_doubt_question": {
+        "layers": [30, 30], "alpha": 0.001, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.7546060911150263
+    }, "b_emphasis": {
+        "layers": [30, 30], "alpha": 0.001, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.7730287056033756
+    }, "b_negative": {
+        "layers": [30, 30], "alpha": 0.003, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.6881820557284367
+    }, "b_relative": {
+        "layers": [30, 30], "alpha": 0.003, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.7886364491254465
+    }, "b_topics": {
+        "layers": [30, 30], "alpha": 0.01, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.700647765850078
+    }, "b_wh_question": {
+        "layers": [30, 30], "alpha": 0.0001, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.8271540151330241
+    }, "b_yn_question": {
+        "layers": [30, 30], "alpha": 0.003, 
+        "learning_rate_init": 0.01, 
+        "RocAucScore": 0.7787390115544056
+    }
+}

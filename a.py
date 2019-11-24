@@ -17,7 +17,7 @@ def genCSV(name):
     X = dataset.iloc[:, :-1]
     y = dataset.iloc[:, -1]
 
-    X_train, X_test, y_test, y_train = train_test_split(X, y)
+    X_train, X_test, y_train, y_test = train_test_split(X, y)
     pd.DataFrame(X_train).to_csv("./SplitData/" + name + "_X_train.csv", index=False)
     pd.DataFrame(X_test).to_csv("./SplitData/" + name + "_X_test.csv", index=False)
     pd.DataFrame(y_train).to_csv("./SplitData/" + name + "_y_train.csv", index=False)
@@ -40,7 +40,7 @@ def genCSV(name):
 
     X = normDataset.iloc[:, :-1]
     y = normDataset.iloc[:, -1]
-    X_train, X_test, y_test, y_train = train_test_split(X, y)
+    X_train, X_test, y_train, y_test = train_test_split(X, y)
     pd.DataFrame(X_train).to_csv("./SplitPreprocessedData/" + name + "_X_train.csv", index=False)
     pd.DataFrame(X_test).to_csv("./SplitPreprocessedData/" + name + "_X_test.csv", index=False)
     pd.DataFrame(y_train).to_csv("./SplitPreprocessedData/" + name + "_y_train.csv", index=False)
