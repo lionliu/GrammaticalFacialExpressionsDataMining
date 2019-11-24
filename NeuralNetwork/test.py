@@ -3,12 +3,16 @@ from sklearn.model_selection import train_test_split, cross_val_predict, cross_v
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import roc_auc_score, roc_curve
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.utils.validation import column_or_1d
 import matplotlib.pyplot as plt
 
 X_train = pd.read_csv("../SplitPreprocessedData/" + "b_wh_question" + "_X_train.csv")
 X_test = pd.read_csv("../SplitPreprocessedData/" + "b_wh_question" + "_X_test.csv")
 y_train = pd.read_csv("../SplitPreprocessedData/" + "b_wh_question" + "_y_train.csv")
+y_train = column_or_1d(y_train, warn=True)
 y_test = pd.read_csv("../SplitPreprocessedData/" + "b_wh_question" + "_y_test.csv")
+y_test = column_or_1d(y_test, warn=True)
+
 bestRocAucScore = 0
 # X = df.iloc[:, :-1]
 # y = df.iloc[:, -1]
