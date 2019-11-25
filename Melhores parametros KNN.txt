@@ -1,0 +1,41 @@
+Melhores parametros para Todos os datasets : weight = distance, alg = ball_tree, leaf_size = 5
+
+Melhores parametros para a_affirmative : k = 5, score = 0.843822771447201
+Melhores parametros para a_conditional : k = 5, score = 0.8783649201040505
+Melhores parametros para a_doubt_question : k = 3, score = 0.8346536373950997
+Melhores parametros para a_emphasis : k = 3, score = 0.8358292546326735
+Melhores parametros para a_negative : k = 3, score = 0.7690938641736513
+Melhores parametros para a_relative : k = 3, score = 0.8714743457655058
+Melhores parametros para a_topics : k = 7, score = 0.851912015780139
+Melhores parametros para a_wh_question : k = 3, score = 0.7777215227388354
+Melhores parametros para a_yn_question : k = 4, score = 0.8358812745605199
+Melhores parametros para b_affirmative : k = 3, score = 0.8893856170829926
+Melhores parametros para b_conditional : k = 4, score = 0.9306417262154968
+Melhores parametros para b_doubt_question : k = 4, score = 0.9346531836189725
+Melhores parametros para b_emphasis : k = 3, score = 0.9211840515505437
+Melhores parametros para b_negative : k = 4, score = 0.9188362548203501
+Melhores parametros para b_relative : k = 5, score = 0.9386119344698884
+Melhores parametros para b_topics : k = 5, score = 0.9160776761354519
+Melhores parametros para b_wh_question : k = 6, score = 0.9084435187814908
+Melhores parametros para b_yn_question : k = 3, score = 0.9226833510484105
+
+n pre processado
+
+Melhores parametros para a_affirmative : k = 11, score = 0.8508953168044076
+Melhores parametros para a_conditional : k = 11, score = 0.9544974440650811
+Melhores parametros para a_doubt_question : k = 17, score = 0.9269994925811871
+Melhores parametros para a_emphasis : k = 9, score = 0.8813105805530047
+Melhores parametros para a_negative : k = 5, score = 0.8950570277862389
+Melhores parametros para a_relative : k = 9, score = 0.940217598778393
+Melhores parametros para a_topics : k = 11, score = 0.894184362934363
+Melhores parametros para a_wh_question : k = 6, score = 0.912603519668737
+Melhores parametros para a_yn_question : k = 12, score = 0.9302969858156029
+Melhores parametros para b_affirmative : k = 6, score = 0.8363777089783282
+Melhores parametros para b_conditional : k = 5, score = 0.856680471487735
+Melhores parametros para b_doubt_question : k = 10, score = 0.8355527830116617
+Melhores parametros para b_emphasis : k = 18, score = 0.8424034201828281
+Melhores parametros para b_negative : k = 12, score = 0.8394158281550641
+Melhores parametros para b_relative : k = 5, score = 0.8182746113487145
+Melhores parametros para b_topics : k = 29, score = 0.8783044693053403
+Melhores parametros para b_wh_question : k = 7, score = 0.9243178400803056
+Melhores parametros para b_yn_question : k = 28, score = 0.819227701356979
