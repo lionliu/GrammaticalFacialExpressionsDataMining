@@ -1,0 +1,57 @@
+{
+    "a_affirmative": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.6968628928110203
+    }, "a_conditional": {
+        "n_estimators": 25, 
+        "RocAucScore": 0.7039636635819272
+    }, "a_doubt_question": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.6911292623769439
+    }, "a_emphasis": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.616163304459043
+    }, "a_negative": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.6650587927075466
+    }, "a_relative": {
+        "n_estimators": 50, 
+        "RocAucScore": 0.7358844477047863
+    }, "a_topics": {
+        "n_estimators": 50, 
+        "RocAucScore": 0.720038647705527
+    }, "a_wh_question": {
+        "n_estimators": 10, 
+        "RocAucScore": 0.6763131026659104
+    }, "a_yn_question": {
+        "n_estimators": 25, 
+        "RocAucScore": 0.6448552587923027
+    }, "b_affirmative": {
+        "n_estimators": 25, 
+        "RocAucScore": 0.6961860670194004
+    }, "b_conditional": {
+        "n_estimators": 50, 
+        "RocAucScore": 0.7658500530651438
+    }, "b_doubt_question": {
+        "n_estimators": 25, 
+        "RocAucScore": 0.796199345582683
+    }, "b_emphasis": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.7774051622427451
+    }, "b_negative": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.7363280043708578
+    }, "b_relative": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.7869324807222118
+    }, "b_topics": {
+        "n_estimators": 50, 
+        "RocAucScore": 0.7290467015322506
+    }, "b_wh_question": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.8302965584574079
+    }, "b_yn_question": {
+        "n_estimators": 100, 
+        "RocAucScore": 0.7855856584247198
+    }
+}
