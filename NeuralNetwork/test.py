@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split, cross_val_predict, cross_val_score
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import roc_auc_score, roc_curve
+from sklearn.metrics import roc_auc_score, roc_curve, classification_report
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.validation import column_or_1d
 import matplotlib.pyplot as plt
@@ -21,13 +21,17 @@ bestRocAucScore = 0
 
 mlp = MLPClassifier(random_state=42, hidden_layer_sizes=(
     30, 30), max_iter=50, activation="relu", solver="adam", alpha=0.0001, learning_rate_init=0.01)
-y_train_proba = cross_val_predict(
-    mlp, X_train, y_train, cv=10, method="predict_proba")
-y_scores = y_train_proba[:, 1]
-fpr, tpr, threshold = roc_curve(y_train, y_scores)
-# print(y_train_proba)
-print(roc_auc_score(y_train, y_scores))
+# y_train_proba = cross_val_predict(
+#     mlp, X_train, y_train, cv=10, method="predict_proba")
 # y_scores = y_train_proba[:, 1]
+# fpr, tpr, threshold = roc_curve(y_train, y_scores)
+# # print(y_train_proba)
+# print(roc_auc_score(y_train, y_scores))
+# y_scores = y_train_proba[:, 1]
+
+mlp.fit(X_train, y_train)
+y_pred = mlp.predict(X_test)
+print(classification_report(y_test, y_pred))
 
 
 # def plot_roc_curve(fpr, tpr, label=None): 
