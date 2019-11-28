@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split, cross_val_predict
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import BaggingClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 from sklearn.metrics import roc_auc_score, roc_curve
 from sklearn.utils.validation import column_or_1d
 from sklearn.ensemble import VotingClassifier
@@ -14,57 +14,68 @@ simplefilter("ignore", category=ConvergenceWarning)
 
 datasets = ["a_affirmative", "a_conditional", "a_doubt_question", "a_emphasis", "a_negative", "a_relative", "a_topics", "a_wh_question", "a_yn_question",
             "b_affirmative", "b_conditional", "b_doubt_question", "b_emphasis", "b_negative", "b_relative", "b_topics", "b_wh_question", "b_yn_question"]
-alphas = {"a_affirmative": 0.0001, "a_conditional": 0.0001, "a_doubt_question": 0.0001, "a_emphasis": 0.0001, "a_negative": 0.0003, "a_relative": 0.0003, "a_topics": 0.0003, "a_wh_question": 0.0003, "a_yn_question": 0.0001,
-          "b_affirmative": 0.01, "b_conditional": 0.01, "b_doubt_question": 0.001, "b_emphasis": 0.001, "b_negative": 0.003, "b_relative": 0.003, "b_topics": 0.01, "b_wh_question": 0.0001, "b_yn_question": 0.003}
+alphas = [0.0001, 0.0001, 0.0001, 0.0001, 0.0003, 0.0003, 0.0003, 0.0003, 0.0001,
+           0.01,  0.01, 0.001, 0.001, 0.003, 0.003, 0.01, 0.0001, 0.003]
 
-lr = {"a_affirmative": 0.01, "a_conditional": 0.01, "a_doubt_question": 0.01, "a_emphasis": 0.01, "a_negative": 0.01, "a_relative": 0.01, "a_topics": 0.01, "a_wh_question": 0.01, "a_yn_question": 0.003,
-      "b_affirmative": 0.01, "b_conditional": 0.01, "b_doubt_question": 0.01, "b_emphasis": 0.01, "b_negative": 0.01, "b_relative": 0.01, "b_topics": 0.01, "b_wh_question": 0.01, "b_yn_question": 0.01}
+lr = [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.003,
+      0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
 
-estimators = {"a_affirmative": 100, "a_conditional": 25, "a_doubt_question": 100, "a_emphasis": 100, "a_negative": 100, "a_relative": 50, "a_topics": 50, "a_wh_question": 10, "a_yn_question": 25,
-              "b_affirmative": 25, "b_conditional": 50, "b_doubt_question": 25, "b_emphasis": 100, "b_negative": 100, "b_relative": 100, "b_topics": 50, "b_wh_question": 100, "b_yn_question": 100}
+estimators = [100, 25, 100, 100, 100, 50, 50, 10,25,
+              25, 50, 25, 100, 100, 100, 50, 100, 100]
 count = 0
 knn = [5, 5, 3, 3, 3, 3, 7, 3, 4, 3, 4, 4, 3, 4, 5, 5, 6, 3]
-depth = [7, 10, None, 8, 10, None, 10, 8,
-         8, 10, 10, None, None, None, 9, None, 7]
-features = [8, None, 4, 6, 9, 6, 10, 8, 2, 6, 9, 6, 8, 12, 8, 8, 12]
-min_samples_split = [9, 9, 10, 3, 6, 9, 7, 9, 3, 4, 4, 10, 9, 9, 5, 10, 3]
-criterion = ["gini", "entropy", "gini", "entropy", "gini", "gini", "entropy", "gini",
-             "entropy", "entropy", "entropy", "entropy", "entropy", "entropy", "gini", "gini", "entropy"]
+depth = [20,10,30,30,10,50,10,None,20,20,20,None,None,20,50,20,30,30]
+features = [4,18,'log2','log2','auto','auto','auto','auto','auto','log2','sqrt',8,4,'log2',None,'log2',14,8]
+min_samples_split = [12,12,20,20,12,20,20,12,20,20,20,20,12,20,20,20,20,20]
+criterion = ["gini", "entropy","entropy","entropy","gini","gini","gini","entropy","gini","entropy","gini","entropy","gini","entropy","entropy","entropy","gini","gini"]
 
-for dataset in datasets:
-    X_train = pd.read_csv(dataset + "_X_train.csv")
-    X_test = pd.read_csv(dataset + "_X_test.csv")
-    y_train = pd.read_csv(dataset + "_y_train.csv")
+for count, dataset in enumerate(datasets):
+    X_train = pd.read_csv("../SplitData/{}_X_train.csv".format(dataset))
+    X_test = pd.read_csv("../SplitData/{}_X_test.csv".format(dataset))
+    y_train = pd.read_csv("../SplitData/{}_y_train.csv".format(dataset))
     y_train = column_or_1d(y_train, warn=False)
-    y_test = pd.read_csv(dataset + "_y_test.csv")
+    y_test = pd.read_csv("../SplitData/{}_y_test.csv".format(dataset))
     y_test = column_or_1d(y_test, warn=False)
-    knn_var = knn[count]
-    model1 = KNeighborsClassifier(n_neighbors=knn_var, weights='distance',
+    
+    model1 = KNeighborsClassifier(n_neighbors=knn[count], weights='distance',
                                   algorithm='ball_tree', leaf_size=1)
-    alpha_var = alphas[dataset]
-    learningrate_var = lr[dataset]
+    #alpha_var = alphas[dataset]
+    #learningrate_var = lr[dataset]
     mlp = MLPClassifier(random_state=42, hidden_layer_sizes=(30, 30), max_iter=50,
-                        activation="relu", solver="adam", alpha=alpha_var,
-                        learning_rate_init=learningrate_var)
-    estimators_var = estimators[dataset]
-    model2 = BaggingClassifier(mlp, n_estimators=estimators_var)
-    max_depth_var = depth[count]
-    max_features_var = features[count]
-    min_samples_split_var = min_samples_split[count]
-    criterion_var = criterion
-    model3 = DecisionTreeClassifier(criterion=criterion_var,
-                                    min_samples_split=min_samples_split_var,
-                                    max_features=max_features_var, max_depth=max)
+                        activation="relu", solver="adam", alpha=alphas[count],
+                        learning_rate_init=lr[count])
+    #estimators_var = estimators[count]
+    model2 = BaggingClassifier(mlp, n_estimators=estimators[count])
+    #max_depth_var = depth[count]
+    #max_features_var = features[count]
+    #min_samples_split_var = min_samples_split[count]
+    #criterion_var = criterion
+    model3 = DecisionTreeClassifier(criterion=criterion[count],
+                                    min_samples_split=min_samples_split[count],
+                                    max_features=features[count], max_depth=depth[count])
     estim = []
     estim.append(("knn", model1))
     estim.append(("bagging", model2))
     estim.append(("decisiontree", model3))
-    ensemble = VotingClassifier(estimators, voting='soft')
-    y_train_proba_mlp = cross_val_predict(
-        mlp, X_train, y_train, cv=10, method="predict_proba")
-    y_scores_mlp = y_train_proba_mlp[:, 1]
-    MLPScore = roc_auc_score(y_train, y_scores_mlp)
+    ensemble = VotingClassifier(estim, voting='soft')
+    ensemble.fit(X_train, y_train)
+    Y_test_prediction = ensemble.predict(X_test)
+
+    with open("Voting/{}_SCORE.txt".format(dataset), "w+") as wp:
+        wp.write("Clasification report:\n {}".format(classification_report(y_test, Y_test_prediction)))
+        wp.write('\n')
+        wp.write("Confussion matrix:\n {}".format(confusion_matrix(y_test, Y_test_prediction)))
+        wp.write('\n')
+        wp.write("Train Score: {}".format(ensemble.score(X_train, y_train)))
+        wp.write('\n')
+        wp.write("Test Score: {}".format(ensemble.score(X_test, y_test)))
+        
+    print(ensemble.score(X_test, y_test))
+
+    #y_train_proba_mlp = cross_val_predict(
+    #    mlp, X_train, y_train, cv=10, method="predict_proba")
+    #y_scores_mlp = y_train_proba_mlp[:, 1]
+    #MLPScore = roc_auc_score(y_train, y_scores_mlp)
     #parametro =
-    print("Melhor parametro para {0} : param = {1}, score = {2}"
-          .format(dataset, "arrumando ainda aaa",  MLPScore))
-    count += 1
+    #print("Melhor parametro para {0} : param = {1}, score = {2}"
+    #      .format(dataset, "arrumando ainda aaa",  MLPScore))

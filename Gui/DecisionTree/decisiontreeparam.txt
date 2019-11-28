@@ -1,0 +1,36 @@
+a_affirmative
+{'criterion': 'entropy', 'max_depth': 30, 'max_features': 60, 'min_samples_split': 20, 'ROC': 0.9023826552235643}
+a_conditional
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 20, 'min_samples_split': 12, 'ROC': 0.978160108341122}
+a_doubt_question
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_split': 20, 'ROC': 0.9544788458846585}
+a_emphasis
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 60, 'min_samples_split': 20, 'ROC': 0.9595627997143149}
+a_negative
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 40, 'min_samples_split': 20, 'ROC': 0.9419004749495157}
+a_relative
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 80, 'min_samples_split': 20, 'ROC': 0.9760903798434816}
+a_topics
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 60, 'min_samples_split': 20, 'ROC': 0.9572982909379969}
+a_wh_question
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 'auto', 'min_samples_split': 20, 'ROC': 0.9661490683229814}
+a_yn_question
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 8, 'min_samples_split': 2, 'ROC': 0.9557608282674772}
+b_affirmative
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 60, 'min_samples_split': 20, 'ROC': 0.9181609907120742}
+b_conditional
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 14, 'min_samples_split': 6, 'ROC': 0.8968620579802484}
+b_doubt_question
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 80, 'min_samples_split': 12, 'ROC': 0.9566109258033304}
+b_emphasis
+{'criterion': 'entropy', 'max_depth': 100, 'max_features': 20, 'min_samples_split': 20, 'ROC': 0.9526790481197552}
+b_negative
+{'criterion': 'gini', 'max_depth': 50, 'max_features': 60, 'min_samples_split': 20, 'ROC': 0.9406193276804892}
+b_relative
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_split': 12, 'ROC': 0.9619386013402771}
+b_topics
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_split': 20, 'ROC': 0.9378018845514291}
+b_wh_question
+{'criterion': 'entropy', 'max_depth': 5, 'max_features': 60, 'min_samples_split': 20, 'ROC': 0.947118288258644}
+b_yn_question
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 'sqrt', 'min_samples_split': 20, 'ROC': 0.9240424563618481}

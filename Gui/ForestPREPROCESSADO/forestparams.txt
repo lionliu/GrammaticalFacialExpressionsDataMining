@@ -1,0 +1,36 @@
+a_affirmative
+{'n_estimators': 200, 'ROC': 0.8417424783432172}
+a_conditional
+{'n_estimators': 100, 'ROC': 0.8428539576365663}
+a_doubt_question
+{'n_estimators': 200, 'ROC': 0.7774580654393801}
+a_emphasis
+{'n_estimators': 200, 'ROC': 0.7867265687778509}
+a_negative
+{'n_estimators': 200, 'ROC': 0.7707661723619171}
+a_relative
+{'n_estimators': 200, 'ROC': 0.8379476612404697}
+a_topics
+{'n_estimators': 200, 'ROC': 0.8291824827197534}
+a_wh_question
+{'n_estimators': 100, 'ROC': 0.785483894868388}
+a_yn_question
+{'n_estimators': 200, 'ROC': 0.8029985388475955}
+b_affirmative
+{'n_estimators': 200, 'ROC': 0.8792294755681732}
+b_conditional
+{'n_estimators': 200, 'ROC': 0.9056284153005465}
+b_doubt_question
+{'n_estimators': 200, 'ROC': 0.9172886524977929}
+b_emphasis
+{'n_estimators': 100, 'ROC': 0.9233638743455497}
+b_negative
+{'n_estimators': 100, 'ROC': 0.9047523590267129}
+b_relative
+{'n_estimators': 200, 'ROC': 0.9200687566820099}
+b_topics
+{'n_estimators': 200, 'ROC': 0.9040539239287434}
+b_wh_question
+{'n_estimators': 100, 'ROC': 0.890524577403305}
+b_yn_question
+{'n_estimators': 100, 'ROC': 0.9058057139176088}

@@ -1,0 +1,36 @@
+a_affirmative
+{'criterion': 'gini', 'max_depth': 20, 'max_features': 4, 'min_samples_split': 12, 'ROC': 0.7313821529481169}
+a_conditional
+{'criterion': 'entropy', 'max_depth': 10, 'max_features': 18, 'min_samples_split': 12, 'ROC': 0.7505046451133408}
+a_doubt_question
+{'criterion': 'entropy', 'max_depth': 30, 'max_features': 'log2', 'min_samples_split': 20, 'ROC': 0.6963871370015638}
+a_emphasis
+{'criterion': 'entropy', 'max_depth': 30, 'max_features': 'log2', 'min_samples_split': 20, 'ROC': 0.7151179779384909}
+a_negative
+{'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_split': 12, 'ROC': 0.6863549054373522}
+a_relative
+{'criterion': 'gini', 'max_depth': 50, 'max_features': 'auto', 'min_samples_split': 20, 'ROC': 0.7360859262311972}
+a_topics
+{'criterion': 'gini', 'max_depth': 10, 'max_features': 'auto', 'min_samples_split': 20, 'ROC': 0.7447019675446304}
+a_wh_question
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_split': 12, 'ROC': 0.6961684555769051}
+a_yn_question
+{'criterion': 'gini', 'max_depth': 20, 'max_features': 'auto', 'min_samples_split': 20, 'ROC': 0.7356289761950139}
+b_affirmative
+{'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_split': 20, 'ROC': 0.8257178343850771}
+b_conditional
+{'criterion': 'gini', 'max_depth': 20, 'max_features': 'sqrt', 'min_samples_split': 20, 'ROC': 0.8208000560459575}
+b_doubt_question
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 8, 'min_samples_split': 20, 'ROC': 0.842245423570527}
+b_emphasis
+{'criterion': 'gini', 'max_depth': None, 'max_features': 4, 'min_samples_split': 12, 'ROC': 0.8414871123640756}
+b_negative
+{'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_split': 20, 'ROC': 0.8299806152688856}
+b_relative
+{'criterion': 'entropy', 'max_depth': 50, 'max_features': None, 'min_samples_split': 20, 'ROC': 0.8217383789043745}
+b_topics
+{'criterion': 'entropy', 'max_depth': 20, 'max_features': 'log2', 'min_samples_split': 20, 'ROC': 0.8156507783662335}
+b_wh_question
+{'criterion': 'gini', 'max_depth': 30, 'max_features': 14, 'min_samples_split': 20, 'ROC': 0.8383955526102642}
+b_yn_question
+{'criterion': 'gini', 'max_depth': 30, 'max_features': 8, 'min_samples_split': 20, 'ROC': 0.8290478951267435}

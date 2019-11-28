@@ -1,0 +1,34 @@
+a_affirmative
+{'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_split': 2, 'train_score': 1.0, 'test_score': 0.9210526315789473}
+a_conditional
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 12, 'min_samples_split': 4, 'train_score': 0.9972027972027973, 'test_score': 0.9727463312368972}
+a_doubt_question
+{'criterion': 'entropy', 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_split': 4, 'train_score': 0.9949186991869918, 'test_score': 0.948170731707317}
+a_emphasis
+{'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_split': 2, 'train_score': 1.0, 'test_score': 0.9629629629629629}
+a_negative
+{'criterion': 'entropy', 'max_depth': 9, 'max_features': 'sqrt', 'min_samples_split': 5, 'train_score': 0.9881376037959668, 'test_score': 0.9217081850533808}
+a_relative
+{'criterion': 'gini', 'max_depth': 10, 'max_features': 12, 'min_samples_split': 3, 'train_score': 0.9988551803091014, 'test_score': 0.9742710120068611}
+a_topics
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_split': 3, 'train_score': 0.9985152190051967, 'test_score': 0.9621380846325167}
+a_wh_question
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 8, 'min_samples_split': 6, 'train_score': 0.9948132780082988, 'test_score': 0.9472049689440993}
+a_yn_question
+{'criterion': 'gini', 'max_depth': None, 'max_features': None, 'min_samples_split': 2, 'train_score': 1.0, 'test_score': 0.9568965517241379}
+b_affirmative
+{'criterion': 'entropy', 'max_depth': None, 'max_features': None, 'min_samples_split': 4, 'train_score': 0.9975155279503105, 'test_score': 0.9144981412639405}
+b_conditional
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_split': 2, 'train_score': 1.0, 'test_score': 0.899803536345776}
+b_doubt_question
+{'criterion': 'gini', 'max_depth': 10, 'max_features': 12, 'min_samples_split': 2, 'train_score': 0.9991087344028521, 'test_score': 0.9306666666666666}
+b_emphasis
+{'criterion': 'entropy', 'max_depth': 10, 'max_features': 8, 'min_samples_split': 4, 'train_score': 0.9950396825396826, 'test_score': 0.9434523809523809}
+b_negative
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_split': 2, 'train_score': 1.0, 'test_score': 0.9444444444444444}
+b_relative
+{'criterion': 'entropy', 'max_depth': 10, 'max_features': 'auto', 'min_samples_split': 3, 'train_score': 0.9992997198879552, 'test_score': 0.9663865546218487}
+b_topics
+{'criterion': 'entropy', 'max_depth': None, 'max_features': 'auto', 'min_samples_split': 3, 'train_score': 1.0, 'test_score': 0.9321663019693655}
+b_wh_question
+{'criterion': 'gini', 'max_depth': None, 'max_features': 10, 'min_samples_split': 2, 'train_score': 1.0, 'test_score': 0.9427710843373494}
