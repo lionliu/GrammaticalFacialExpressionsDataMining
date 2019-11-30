@@ -33,14 +33,17 @@ def autolabel(rects):
                     textcoords="offset points",
                     ha='center', va='bottom')
 
-x = np.arange(6)
+x = np.arange(7)
 
 
 plt.figure()
 plt.title("Default dataset mean scores")
 plt.xlabel('Classifiers')
 plt.ylabel('Mean Scores')
-rect = plt.bar(x, scoresMean)
-autolabel(rect)
-plt.xticks(x, ('tree', 'KNN', 'MLP', 'RF', 'Bagging', 'Voting'))
+# rect = plt.bar(x, scoresMean)
+# autolabel(rect)
+
+labels = ['tree', 'KNN', 'MLP', 'RF', 'Bagging', 'Voting']
+box = plt.boxplot(scoresDefault, labels=labels, patch_artist=True)
+# plt.xticks(x, ('', 'tree', 'KNN', 'MLP', 'RF', 'Bagging', 'Voting'))
 plt.show()
