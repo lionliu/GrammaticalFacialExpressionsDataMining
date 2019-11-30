@@ -1,0 +1,12 @@
+Clasification report:               precision    recall  f1-score   support
+
+           0       0.94      0.91      0.93       173
+           1       0.90      0.93      0.92       149
+
+    accuracy                           0.92       322
+   macro avg       0.92      0.92      0.92       322
+weighted avg       0.92      0.92      0.92       322
+
+Confussion matrix: [[158  15]
+ [ 10 139]]
+Train Score: 0.941908713692946Test Score: 0.922360248447205
