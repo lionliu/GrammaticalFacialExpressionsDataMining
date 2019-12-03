@@ -57,8 +57,8 @@ for data in datasets:
     roc = []
     bestRocAucScore = 0
 
-    print(params[data]['alpha'])
-    print(params[data]['learning_rate_init'])
+    # print(params[data]['alpha'])
+    # print(params[data]['learning_rate_init'])
 
     for est in n_estimators:
         mlp = MLPClassifier(random_state=42, hidden_layer_sizes=(30, 30, 30), max_iter=50,
@@ -68,15 +68,15 @@ for data in datasets:
             bag, X_train, y_train, cv=10, method="predict_proba")
         y_scores = y_train_proba[:, 1]
         score = roc_auc_score(y_train, y_scores)
-        print(est)
+        # print(est)
         # print(s)
         roc.append(score)
-        if(score > bestRocAucScore):
-            bestsParams[data] = {
-                "estimators": est,
-                "RocAucScore": score
-            }
-            bestRocAucScore = score
+        # if(score > bestRocAucScore):
+        #     bestsParams[data] = {
+        #         "estimators": est,
+        #         "RocAucScore": score
+        #     }
+        #     bestRocAucScore = score
     plt.plot(combinations, roc, label=data)
 
 plt.legend()

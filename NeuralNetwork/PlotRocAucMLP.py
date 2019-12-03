@@ -38,7 +38,7 @@ for data in datasets:
     y_test = column_or_1d(y_test, warn=True)
 
     roc = []
-    bestRocAucScore = 0
+    # bestRocAucScore = 0
     for lri in learning_rate_init:
         for a in alpha:
             mlp = MLPClassifier(random_state=42, hidden_layer_sizes=(30, 30, 30), max_iter=50,
@@ -47,13 +47,13 @@ for data in datasets:
                 mlp, X_train, y_train, cv=10, method="predict_proba")
             y_scores = y_train_proba[:, 1]
             score = roc_auc_score(y_train, y_scores)
-            if(score > bestRocAucScore):
-                    bestsParams[data] = {
-                        "alpha": a,
-                        "learning_rate_init": lri,
-                        "RocAucScore": score
-                    }
-                    bestRocAucScore = score
+            # if(score > bestRocAucScore):
+            #         bestsParams[data] = {
+            #             "alpha": a,
+            #             "learning_rate_init": lri,
+            #             "RocAucScore": score
+            #         }
+            #         bestRocAucScore = score
             roc.append(score)
     plt.plot(combinations, roc, label=data)
 
@@ -65,5 +65,5 @@ plt.legend()
 
 plt.show()
 
-for i in bestsParams:
-    print(i, " :", bestsParams[i])
+# for i in bestsParams:
+#     print(i, " :", bestsParams[i])
