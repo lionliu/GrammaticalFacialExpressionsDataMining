@@ -1,4 +1,5 @@
 import pandas as pd
+from time import perf_counter
 from sklearn.model_selection import train_test_split, cross_val_predict
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import BaggingClassifier
@@ -37,6 +38,7 @@ for count, dataset in enumerate(datasets):
     y_test = pd.read_csv("../SplitData/{}_y_test.csv".format(dataset))
     y_test = column_or_1d(y_test, warn=False)
     
+    seconds = perf_counter()
     model1 = KNeighborsClassifier(n_neighbors=knn[count], weights='distance',
                                   algorithm='ball_tree', leaf_size=1)
     #alpha_var = alphas[dataset]
@@ -61,16 +63,18 @@ for count, dataset in enumerate(datasets):
     ensemble.fit(X_train, y_train)
     Y_test_prediction = ensemble.predict(X_test)
 
-    with open("Voting/{}_SCORE.txt".format(dataset), "w+") as wp:
-        wp.write("Clasification report:\n {}".format(classification_report(y_test, Y_test_prediction)))
-        wp.write('\n')
-        wp.write("Confussion matrix:\n {}".format(confusion_matrix(y_test, Y_test_prediction)))
-        wp.write('\n')
-        wp.write("Train Score: {}".format(ensemble.score(X_train, y_train)))
-        wp.write('\n')
-        wp.write("Test Score: {}".format(ensemble.score(X_test, y_test)))
+    print(perf_counter() - seconds)
+
+    # with open("Voting/{}_SCORE.txt".format(dataset), "w+") as wp:
+    #     wp.write("Clasification report:\n {}".format(classification_report(y_test, Y_test_prediction)))
+    #     wp.write('\n')
+    #     wp.write("Confussion matrix:\n {}".format(confusion_matrix(y_test, Y_test_prediction)))
+    #     wp.write('\n')
+    #     wp.write("Train Score: {}".format(ensemble.score(X_train, y_train)))
+    #     wp.write('\n')
+    #     wp.write("Test Score: {}".format(ensemble.score(X_test, y_test)))
         
-    print(ensemble.score(X_test, y_test))
+    # print(ensemble.score(X_test, y_test))
 
     #y_train_proba_mlp = cross_val_predict(
     #    mlp, X_train, y_train, cv=10, method="predict_proba")

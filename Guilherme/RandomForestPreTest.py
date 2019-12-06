@@ -1,4 +1,5 @@
 import pandas as pd
+from time import perf_counter
 from sklearn.model_selection import train_test_split, cross_val_predict
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 from sklearn.utils.validation import column_or_1d
@@ -26,21 +27,22 @@ for cnt, d in enumerate(datasets):
     X_train = pd.read_csv("../SplitPreprocessedData/{}_X_train.csv".format(d))
     X_test = pd.read_csv("../SplitPreprocessedData/{}_X_test.csv".format(d))
     y_train = pd.read_csv("../SplitPreprocessedData/{}_y_train.csv".format(d))
-    y_train = column_or_1d(y_train, warn=True)
+    y_train = column_or_1d(y_train, warn=False)
     y_test = pd.read_csv("../SplitPreprocessedData/{}_y_test.csv".format(d))
-    y_test = column_or_1d(y_test, warn=True)
+    y_test = column_or_1d(y_test, warn=False)
     
+    seconds = perf_counter()
     clf = RandomForestClassifier(n_estimators=e[cnt], criterion=c[cnt],min_samples_split=mins[cnt],max_features=maxf[cnt],max_depth=maxd[cnt])
     clf.fit(X_train, y_train)
     Y_test_prediction = clf.predict(X_test)
-    
-    with open("ForestPREPROCESSADO/{}_SCORE.txt".format(d), "w+") as wp:
-        wp.write("Clasification report: {}".format(classification_report(y_test, Y_test_prediction)))
-        wp.write('\n')
-        wp.write("Confussion matrix: {}".format(confusion_matrix(y_test, Y_test_prediction)))
-        wp.write('\n')
-        wp.write("Train Score: {}".format(clf.score(X_train, y_train)))
-        wp.write("Test Score: {}".format(clf.score(X_test, y_test)))
+    print(perf_counter() - seconds)
+    # with open("ForestPREPROCESSADO/{}_SCORE.txt".format(d), "w+") as wp:
+    #     wp.write("Clasification report: {}".format(classification_report(y_test, Y_test_prediction)))
+    #     wp.write('\n')
+    #     wp.write("Confussion matrix: {}".format(confusion_matrix(y_test, Y_test_prediction)))
+    #     wp.write('\n')
+    #     wp.write("Train Score: {}".format(clf.score(X_train, y_train)))
+    #     wp.write("Test Score: {}".format(clf.score(X_test, y_test)))
 
     
 #writer.close()
